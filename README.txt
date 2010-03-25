@@ -1,4 +1,6 @@
 
+COmmTrack is build on Commcare-Hq
+
 Commcare-HQ Overall project structure.
 
 apps/
