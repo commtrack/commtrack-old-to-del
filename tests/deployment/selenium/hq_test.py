@@ -15,7 +15,7 @@ class testingPost(unittest.TestCase):
     def test_testingPost(self):
         sel = self.selenium
         sel.open("/no_permissions?next=/")
-        sel.click("link=Log in to CommcareHQ")
+        sel.click("link=Log in to CommTrack")
         sel.wait_for_page_to_load("30000")
         sel.type("id_username", user)
         sel.type("id_password", passw)
