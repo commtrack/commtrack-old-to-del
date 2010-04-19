@@ -51,7 +51,7 @@ class Resource(models.Model):
 #   location (from Location app) but for now will attact it to both till a decision is made.
     location = models.ForeignKey(Location)
     domain  = models.ForeignKey(Domain)
-    status = models.ForeignKey(Status)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES)
     description = models.TextField(null=True, blank=True)
     status_change_count = models.IntegerField(default=0)
     date_added = models.DateTimeField(default=datetime.datetime.now())

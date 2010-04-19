@@ -9,7 +9,7 @@ from resources.models import *
 '''
 class ResourceAdmin(admin.ModelAdmin):
     list_display = ('name', 'code', 'category','domain')
-    list_filter = ['domain', 'category', 'status']
+#    list_filter = ['domain', 'category', 'status']
     search_fields = ('name','code')
 admin.site.register(Resource,ResourceAdmin)
 
@@ -18,9 +18,9 @@ class ResourceCategoryAdmin(admin.ModelAdmin):
 admin.site.register(ResourceCategory,ResourceCategoryAdmin)
 
 class TrackResourceAdmin(admin.ModelAdmin):
-    list_display = ('resource', 'status', 'user', 'date_tracked')
+    list_display = ('tracked_resource', 'status', 'user', 'date_tracked')
     date_hierarchy = 'date_tracked'
-    list_filter = ('status', 'date_tracked')
+#    list_filter = ('status', 'date_tracked')
     search_fields = ('resource', 'user')
 admin.site.register(TrackResource, TrackResourceAdmin)
 
